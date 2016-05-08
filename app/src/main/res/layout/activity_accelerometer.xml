@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="activity.AccelerometerActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AccelData"
+        android:text="@string/accelerometer_sensor_output_string"/>
+
+    <TextView
+        android:layout_below="@id/AccelData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timestamp"
+        android:text="@string/timestamp_string"/>
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_below="@id/timestamp"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/sensorGraph" />
+
+</RelativeLayout>

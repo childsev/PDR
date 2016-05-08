@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="PDR_AppTheme" parent="PDR_AppTheme.Base">
+
+    </style>
+
+    <style name="PDR_AppTheme.Base" parent="@android:style/Theme.Material.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/windowBackground</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>

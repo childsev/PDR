@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Pedestrian Dead Reckoning</string>
+    <string name="action_settings">Options Menu</string>
+
+
+    <!-- Default Sensor Data. Displayed when the application has not updated the data from the hardware-->
+    <string name="light_sensor_output_string">Current Light Sensor Output: %1$f lumens</string>
+    <string name="gyroscope_sensor_output_string">Current %1$s Orientation: %2$f rad/s
+                            \nCurrent %3$s Orientation: %4$f rad/s
+                            \nCurrent %5$s Orientation: %6$f rad/s</string>
+    <string name="accelerometer_sensor_output_string">Current %1$s Acceleration:  %2$f  m/s^2
+                            \nCurrent %3$s Acceleration:  %4$f  m/s^2
+                            \nCurrent %5$s Acceleration:  %6$f  m/s^2 </string>
+    <string name="timestamp_string">Time elapsed: %1$d ms</string>
+    <string name="sensor_list_string">%1$s</string>
+
+    <!-- Activity titles. Used in ActionBar. Unneeded if Action Bar Removed-->
+    <string name="title_activity_gyroscope">Gyroscope Activity</string>
+    <string name="title_activity_accelerometer">Accelerometer Activity</string>
+    <string name="title_activity_light_sensor">Light Activity</string>
+    <string name="title_activity_database_viewer">Database Viewer</string>
+    <string name="title_activity_plotter">PDR Graph</string>
+    <string name="title_activity_compass">Compass</string>
+
+    <!--Sensor names-->
+    <string name="name_sensor_accelerometer">Accelerometer</string>
+    <string name="name_sensor_magnetometer">Magnetometer</string>
+    <string name="name_sensor_gyroscope">Gyroscope</string>
+    <string name="name_sensor_light">Light</string>
+
+    <!--Button titles-->
+    <string name="title_button_view">View</string>
+    <string name="title_button_export">Export</string>
+    <string name="title_button_delete">Delete</string>
+
+    <!--Button hints-->
+    <string name="hint_button_export_database">Export the sensor database</string>
+    <string name="hint_button_delete_database">Delete the sensor database</string>
+    <string name="hint_button_view_data">View the accelerometer database.</string>
+
+    <!-- String array for the spinner in the main activity -->
+    <string-array name="sensorSpinnerOptions">
+        <item> "Gyroscope" </item>
+        <item> "Accelerometer" </item>
+        <item> "Light" </item>
+        <item> "Plotter" </item>
+    </string-array>
+
+    <!--Errors-->
+    <string name="error_service_no_sensors">No sensors are available on this device. Service not starting!</string>
+    <string name="error_necessary_sensor_DNE">This device does not not contain a(n) %1$s. Service not starting!</string>
+
+    <string name="list_item_sensor_list">sName.setText(%1$s \nPower Usage (mA):  %2$f \nFIFO: %3$f</string>
+
+
+</resources>

@@ -1,0 +1,111 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    tools:context="activity.MainActivity">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/activitySelectionSpinner">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/spinner" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Launch Activity"
+            android:id="@+id/launchButton"
+            android:onClick="startSensorActivity"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/linearLayoutDIB">
+        <!--android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"-->
+
+        <!-- START Data Interaction Buttons -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:hint="@string/hint_button_view_data"
+            android:text="@string/title_button_view"
+            android:id="@+id/dataButton"
+            android:onClick="viewDataList" />
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:hint="@string/hint_button_delete_database"
+            android:text="@string/title_button_delete"
+            android:onClick="deleteData"
+            android:id="@+id/button_delDb" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:text="@string/title_button_export"
+            android:hint="@string/hint_button_export_database"
+            android:onClick="exportDatabase"
+            android:id="@+id/button_expDb" />
+        <!-- END Data Interaction Buttons -->
+
+        <!-- Service Service -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:text="Service Switch"
+            android:onClick="switchService"
+            android:id="@+id/button_service_enabler" />
+    </LinearLayout>
+
+    <ListView
+        android:background="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:id="@+id/sList"
+        android:layout_above="@id/linearLayoutDIB"
+        android:layout_below="@id/activitySelectionSpinner"
+        android:layout_centerHorizontal="true"
+        android:choiceMode="singleChoice" />
+
+</RelativeLayout>

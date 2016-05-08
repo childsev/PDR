@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="msu.evan.gyrodata">
+
+    <!--
+         For permission to write to an external directory for debugging.
+        Could also just write to getExternalFileDir()
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_directions_walk_black_24dp"
+        android:label="@string/app_name"
+        android:theme="@style/PDR_AppTheme">
+        <activity
+            android:name="activity.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="activity.AccelerometerActivity"
+            android:label="@string/title_activity_accelerometer"
+            android:parentActivityName="activity.MainActivity" />
+        <activity
+            android:name="activity.GyroscopeActivity"
+            android:label="@string/title_activity_gyroscope"
+            android:parentActivityName="activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="activity.LightSensorActivity"
+            android:label="@string/title_activity_light_sensor"
+            android:parentActivityName="activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="database.DatabaseViewer"
+            android:label="@string/title_activity_database_viewer"
+            android:parentActivityName="activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.MainActivity" />
+        </activity>
+
+        <service
+            android:name=".AccelerometerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="activity.PlotterActivity"
+            android:label="@string/title_activity_plotter"
+            android:parentActivityName="activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="activity.CompassActivity"
+            android:label="@string/title_activity_compass"
+            android:parentActivityName="activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

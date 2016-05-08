@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:text="Timestamps"
+        android:textStyle="bold"
+        android:id="@+id/id" />
+
+    <TextView
+        android:layout_toRightOf="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:text="Timestamps"
+        android:id="@+id/dbTimestampEntry" />
+
+    <TextView
+        android:layout_toRightOf="@id/dbTimestampEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:text="Acceleration in X"
+        android:id="@+id/dbXEntry"/>
+
+    <TextView
+        android:layout_toRightOf="@id/dbXEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:text="Acceleration in Y"
+        android:id="@+id/dbYEntry"/>
+
+    <TextView
+        android:layout_toRightOf="@id/dbYEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:text="Acceleration in Z"
+        android:id="@+id/dbZEntry"/>
+
+
+</RelativeLayout>
